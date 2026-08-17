@@ -229,10 +229,18 @@
     enBtn.addEventListener('click', () => applyLanguage('en'));
     ruBtn.addEventListener('click', () => applyLanguage('ru'));
 
-    let lang = 'en';
-    try { lang = localStorage.getItem('shohlabs-support-lang') || lang; } catch (_) {}
-    if (lang !== 'ru' && /^ru\b/i.test(navigator.language || '')) lang = 'ru';
-    applyLanguage(lang === 'ru' ? 'ru' : 'en');
+    let savedLang = null;
+    try { savedLang = localStorage.getItem('shohlabs-support-lang'); } catch (_) {}
+
+    let lang;
+    if (savedLang === 'en' || savedLang === 'ru') {
+      lang = savedLang;
+    } else {
+      const browserLanguage = ((navigator.languages && navigator.languages[0]) || navigator.language || 'en').toLowerCase();
+      lang = /^(ru|tg)(-|$)/.test(browserLanguage) ? 'ru' : 'en';
+    }
+
+    applyLanguage(lang);
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
 </body>
