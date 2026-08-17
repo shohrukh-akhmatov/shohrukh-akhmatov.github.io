@@ -3,244 +3,134 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Official support center for Shoh Labs apps, including Somoni and Expiron.">
+  <meta id="meta-description" name="description" content="Official support center for Shoh Labs apps, including Somoni and Expiron.">
   <meta name="theme-color" content="#0f766e">
   <title>Shoh Labs Support</title>
   <style>
-    :root {
-      color-scheme: light dark;
-      font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      --bg: #f5f7f7;
-      --surface: #ffffff;
-      --text: #17201f;
-      --muted: #667370;
-      --line: #dce3e1;
-      --accent: #0f766e;
-      --accent-soft: #e7f4f2;
-    }
-    * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      min-width: 280px;
-      min-height: 100vh;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.5;
-    }
-    a { color: inherit; }
-    a:focus-visible, button:focus-visible { outline: 3px solid #e3a008; outline-offset: 3px; }
-    .wrap { width: min(100% - 32px, 820px); margin: 0 auto; }
-    header {
-      border-bottom: 1px solid var(--line);
-      background: var(--surface);
-    }
-    .header-inner {
-      min-height: 64px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 16px;
-    }
-    .brand { font-weight: 780; font-size: 19px; text-decoration: none; }
-    .lang { display: flex; gap: 6px; }
-    .lang button {
-      appearance: none;
-      border: 1px solid var(--line);
-      border-radius: 999px;
-      padding: 6px 10px;
-      background: transparent;
-      color: var(--muted);
-      font: inherit;
-      font-size: 13px;
-      cursor: pointer;
-    }
-    .lang button[aria-pressed="true"] {
-      background: var(--accent-soft);
-      color: var(--accent);
-      border-color: transparent;
-      font-weight: 700;
-    }
-    main { padding: 48px 0 64px; }
-    .hero { max-width: 650px; }
-    .eyebrow {
-      margin: 0 0 8px;
-      color: var(--accent);
-      font-weight: 760;
-      font-size: 14px;
-      text-transform: uppercase;
-      letter-spacing: .04em;
-    }
-    h1 { margin: 0; font-size: clamp(34px, 7vw, 50px); line-height: 1.08; }
-    .lead { margin: 14px 0 0; color: var(--muted); font-size: 18px; }
-    .contact {
-      margin-top: 24px;
-      padding: 18px;
-      border: 1px solid var(--line);
-      border-radius: 14px;
-      background: var(--surface);
-    }
-    .contact-label { color: var(--muted); font-size: 14px; margin-bottom: 4px; }
-    .contact a { color: var(--accent); font-weight: 730; text-underline-offset: 3px; overflow-wrap: anywhere; }
-    .apps { margin-top: 46px; }
-    h2 { margin: 0 0 14px; font-size: 23px; }
-    .grid { display: grid; gap: 14px; }
-    .app-card {
-      padding: 20px;
-      border: 1px solid var(--line);
-      border-radius: 16px;
-      background: var(--surface);
-    }
-    .app-top { display: flex; align-items: center; gap: 14px; }
-    .app-mark {
-      flex: 0 0 54px;
-      width: 54px;
-      height: 54px;
-      display: grid;
-      place-items: center;
-      border-radius: 14px;
-      background: var(--accent-soft);
-      color: var(--accent);
-      font-size: 23px;
-      font-weight: 800;
-    }
-    .app-name { margin: 0; font-size: 20px; font-weight: 780; }
-    .app-desc { margin: 3px 0 0; color: var(--muted); font-size: 14px; }
-    .links { margin-top: 16px; display: flex; flex-wrap: wrap; gap: 9px; }
-    .links a {
-      text-decoration: none;
-      padding: 8px 11px;
-      border: 1px solid var(--line);
-      border-radius: 9px;
-      font-size: 14px;
-      font-weight: 650;
-    }
-    .links a.primary { background: var(--accent); color: #fff; border-color: var(--accent); }
-    footer {
-      border-top: 1px solid var(--line);
-      background: var(--surface);
-      color: var(--muted);
-    }
-    .footer-inner {
-      min-height: 72px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 16px;
-      flex-wrap: wrap;
-      font-size: 14px;
-    }
-    .footer-inner a { color: var(--accent); text-underline-offset: 3px; }
-    @media (prefers-color-scheme: dark) {
-      :root {
-        --bg: #101514;
-        --surface: #19201f;
-        --text: #f3f7f6;
-        --muted: #a9b5b2;
-        --line: #33403d;
-        --accent: #73d3c7;
-        --accent-soft: #183a36;
-      }
-      .links a.primary { color: #0b201e; }
-    }
+    :root { color-scheme:light dark; font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; --bg:#f5f7f7; --surface:#fff; --text:#17201f; --muted:#667370; --line:#dce3e1; --accent:#0f766e; --accent-soft:#e7f4f2; }
+    * { box-sizing:border-box; }
+    body { margin:0; min-width:280px; min-height:100vh; background:var(--bg); color:var(--text); line-height:1.5; }
+    a { color:inherit; }
+    a:focus-visible, button:focus-visible { outline:3px solid #e3a008; outline-offset:3px; }
+    .wrap { width:min(100% - 32px,820px); margin:0 auto; }
+    header { border-bottom:1px solid var(--line); background:var(--surface); }
+    .header-inner { min-height:64px; display:flex; align-items:center; justify-content:space-between; gap:16px; }
+    .brand { font-weight:780; font-size:19px; text-decoration:none; }
+    .lang { display:flex; gap:6px; }
+    .lang button { appearance:none; border:1px solid var(--line); border-radius:999px; padding:6px 10px; background:transparent; color:var(--muted); font:inherit; font-size:13px; cursor:pointer; }
+    .lang button[aria-pressed="true"] { background:var(--accent-soft); color:var(--accent); border-color:transparent; font-weight:700; }
+    main { padding:48px 0 64px; }
+    .hero { max-width:650px; }
+    .eyebrow { margin:0 0 8px; color:var(--accent); font-weight:760; font-size:14px; text-transform:uppercase; letter-spacing:.04em; }
+    h1 { margin:0; font-size:clamp(34px,7vw,50px); line-height:1.08; }
+    .lead { margin:14px 0 0; color:var(--muted); font-size:18px; }
+    .contact { margin-top:24px; padding:18px; border:1px solid var(--line); border-radius:14px; background:var(--surface); }
+    .contact-label { color:var(--muted); font-size:14px; margin-bottom:4px; }
+    .contact a { color:var(--accent); font-weight:730; text-underline-offset:3px; overflow-wrap:anywhere; }
+    .apps { margin-top:46px; }
+    h2 { margin:0 0 14px; font-size:23px; }
+    .grid { display:grid; gap:14px; }
+    .app-card { padding:20px; border:1px solid var(--line); border-radius:16px; background:var(--surface); }
+    .app-top { display:flex; align-items:center; gap:14px; }
+    .app-mark { flex:0 0 54px; width:54px; height:54px; display:grid; place-items:center; border-radius:14px; background:var(--accent-soft); color:var(--accent); font-size:23px; font-weight:800; }
+    .app-name { margin:0; font-size:20px; font-weight:780; }
+    .app-desc { margin:3px 0 0; color:var(--muted); font-size:14px; }
+    .links { margin-top:16px; display:flex; flex-wrap:wrap; gap:9px; }
+    .links a { text-decoration:none; padding:8px 11px; border:1px solid var(--line); border-radius:9px; font-size:14px; font-weight:650; }
+    .links a.primary { background:var(--accent); color:#fff; border-color:var(--accent); }
+    footer { border-top:1px solid var(--line); background:var(--surface); color:var(--muted); }
+    .footer-inner { min-height:72px; display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap; font-size:14px; }
+    .footer-inner a { color:var(--accent); text-underline-offset:3px; }
+    @media (prefers-color-scheme:dark) { :root { --bg:#101514; --surface:#19201f; --text:#f3f7f6; --muted:#a9b5b2; --line:#33403d; --accent:#73d3c7; --accent-soft:#183a36; } .links a.primary { color:#0b201e; } }
   </style>
 </head>
 <body>
-  <header>
-    <div class="wrap header-inner">
-      <a class="brand" href="/">Shoh Labs</a>
-      <div class="lang" aria-label="Language">
-        <button id="enBtn" type="button" aria-pressed="true">EN</button>
-        <button id="ruBtn" type="button" aria-pressed="false">RU</button>
-      </div>
-    </div>
-  </header>
+  <header><div class="wrap header-inner"><a class="brand" href="/">Shoh Labs</a><div class="lang" aria-label="Language"><button id="enBtn" type="button" aria-pressed="true">EN</button><button id="ruBtn" type="button" aria-pressed="false">RU</button></div></div></header>
 
   <main class="wrap">
     <section class="hero">
       <p class="eyebrow" data-en="Support center" data-ru="Центр поддержки">Support center</p>
       <h1 data-en="How can we help?" data-ru="Чем мы можем помочь?">How can we help?</h1>
       <p class="lead" data-en="Official support for Shoh Labs applications. Choose an app below or contact us directly." data-ru="Официальная поддержка приложений Shoh Labs. Выберите приложение ниже или свяжитесь с нами напрямую.">Official support for Shoh Labs applications. Choose an app below or contact us directly.</p>
-
-      <div class="contact">
-        <div class="contact-label" data-en="Support email" data-ru="Электронная почта поддержки">Support email</div>
-        <a href="mailto:shohlabs.dev@gmail.com">shohlabs.dev@gmail.com</a>
-      </div>
+      <div class="contact"><div class="contact-label" data-en="Support email" data-ru="Электронная почта поддержки">Support email</div><a href="mailto:shohlabs.dev@gmail.com">shohlabs.dev@gmail.com</a></div>
     </section>
 
     <section class="apps">
       <h2 data-en="Our apps" data-ru="Наши приложения">Our apps</h2>
       <div class="grid">
         <article class="app-card">
-          <div class="app-top">
-            <div class="app-mark" aria-hidden="true">S</div>
-            <div>
-              <h3 class="app-name">Somoni</h3>
-              <p class="app-desc" data-en="RUB → TJS transfer rates and comparison." data-ru="Курсы и сравнение переводов RUB → TJS.">RUB → TJS transfer rates and comparison.</p>
-            </div>
-          </div>
+          <div class="app-top"><div class="app-mark" aria-hidden="true">S</div><div><h3 class="app-name">Somoni</h3><p class="app-desc" data-en="RUB → TJS transfer rates and comparison." data-ru="Курсы и сравнение переводов RUB → TJS.">RUB → TJS transfer rates and comparison.</p></div></div>
           <div class="links">
             <a class="primary" href="mailto:shohlabs.dev@gmail.com?subject=Somoni%20Support" data-en="Contact support" data-ru="Написать в поддержку">Contact support</a>
             <a href="https://shohrukh-akhmatov.github.io/ratetjapp/download/" data-en="Download" data-ru="Скачать">Download</a>
-            <a href="https://shohrukh-akhmatov.github.io/ratetjapp/en/privacy-en.html" data-en="Privacy" data-ru="Конфиденциальность">Privacy</a>
-            <a href="https://shohrukh-akhmatov.github.io/ratetjapp/en/terms-en.html" data-en="Terms" data-ru="Условия">Terms</a>
+            <a id="somoniPrivacy" href="https://shohrukh-akhmatov.github.io/ratetjapp/en/privacy-en.html" data-en="Privacy" data-ru="Конфиденциальность">Privacy</a>
+            <a id="somoniTerms" href="https://shohrukh-akhmatov.github.io/ratetjapp/en/terms-en.html" data-en="Terms" data-ru="Условия">Terms</a>
           </div>
         </article>
 
         <article class="app-card">
-          <div class="app-top">
-            <div class="app-mark" aria-hidden="true">E</div>
-            <div>
-              <h3 class="app-name">Expiron</h3>
-              <p class="app-desc" data-en="Expiration-date calculator, tracker and reminders." data-ru="Расчёт сроков годности, контроль и напоминания.">Expiration-date calculator, tracker and reminders.</p>
-            </div>
-          </div>
+          <div class="app-top"><div class="app-mark" aria-hidden="true">E</div><div><h3 class="app-name">Expiron</h3><p class="app-desc" data-en="Expiration-date calculator, tracker and reminders." data-ru="Расчёт сроков годности, контроль и напоминания.">Expiration-date calculator, tracker and reminders.</p></div></div>
           <div class="links">
             <a class="primary" href="mailto:shohlabs.dev@gmail.com?subject=Expiron%20Support" data-en="Contact support" data-ru="Написать в поддержку">Contact support</a>
             <a href="https://shohrukh-akhmatov.github.io/expira-legal/link.html" data-en="Download" data-ru="Скачать">Download</a>
-            <a href="https://shohrukh-akhmatov.github.io/expira-legal/en/privacy.html" data-en="Privacy" data-ru="Конфиденциальность">Privacy</a>
-            <a href="https://shohrukh-akhmatov.github.io/expira-legal/en/eula.html" data-en="Terms" data-ru="Условия">Terms</a>
+            <a id="expironPrivacy" href="https://shohrukh-akhmatov.github.io/expira-legal/en/privacy.html" data-en="Privacy" data-ru="Конфиденциальность">Privacy</a>
+            <a id="expironTerms" href="https://shohrukh-akhmatov.github.io/expira-legal/en/eula.html" data-en="Terms" data-ru="Условия">Terms</a>
           </div>
         </article>
       </div>
     </section>
   </main>
 
-  <footer>
-    <div class="wrap footer-inner">
-      <span>&copy; <span id="year">2026</span> Shoh Labs</span>
-      <a href="/" data-en="Shoh Labs home" data-ru="Главная Shoh Labs">Shoh Labs home</a>
-    </div>
-  </footer>
+  <footer><div class="wrap footer-inner"><span>&copy; <span id="year">2026</span> Shoh Labs</span><a href="/" data-en="Shoh Labs home" data-ru="Главная Shoh Labs">Shoh Labs home</a></div></footer>
 
   <script>
     const enBtn = document.getElementById('enBtn');
     const ruBtn = document.getElementById('ruBtn');
+    const metaDescription = document.getElementById('meta-description');
 
-    function applyLanguage(lang) {
+    const LEGAL = {
+      en: {
+        somoniPrivacy: 'https://shohrukh-akhmatov.github.io/ratetjapp/en/privacy-en.html',
+        somoniTerms: 'https://shohrukh-akhmatov.github.io/ratetjapp/en/terms-en.html',
+        expironPrivacy: 'https://shohrukh-akhmatov.github.io/expira-legal/en/privacy.html',
+        expironTerms: 'https://shohrukh-akhmatov.github.io/expira-legal/en/eula.html'
+      },
+      ru: {
+        somoniPrivacy: 'https://shohrukh-akhmatov.github.io/ratetjapp/ru/privacy-ru.html',
+        somoniTerms: 'https://shohrukh-akhmatov.github.io/ratetjapp/ru/terms-ru.html',
+        expironPrivacy: 'https://shohrukh-akhmatov.github.io/expira-legal/ru/privacy.html',
+        expironTerms: 'https://shohrukh-akhmatov.github.io/expira-legal/ru/eula.html'
+      }
+    };
+
+    function normalizeLanguage(lang) { return lang === 'ru' ? 'ru' : 'en'; }
+
+    function applyLanguage(requestedLang) {
+      const lang = normalizeLanguage(requestedLang);
       document.documentElement.lang = lang;
-      document.querySelectorAll('[data-en][data-ru]').forEach(el => {
-        el.textContent = el.dataset[lang];
-      });
+      document.title = lang === 'ru' ? 'Поддержка Shoh Labs' : 'Shoh Labs Support';
+      metaDescription.content = lang === 'ru'
+        ? 'Официальный центр поддержки приложений Shoh Labs, включая Somoni и Expiron.'
+        : 'Official support center for Shoh Labs apps, including Somoni and Expiron.';
+      document.querySelectorAll('[data-en][data-ru]').forEach(el => { el.textContent = el.dataset[lang]; });
+      Object.entries(LEGAL[lang]).forEach(([id, href]) => { const el = document.getElementById(id); if (el) el.href = href; });
       enBtn.setAttribute('aria-pressed', String(lang === 'en'));
       ruBtn.setAttribute('aria-pressed', String(lang === 'ru'));
       try { localStorage.setItem('shohlabs-support-lang', lang); } catch (_) {}
     }
 
-    enBtn.addEventListener('click', () => applyLanguage('en'));
-    ruBtn.addEventListener('click', () => applyLanguage('ru'));
-
-    let savedLang = null;
-    try { savedLang = localStorage.getItem('shohlabs-support-lang'); } catch (_) {}
-
-    let lang;
-    if (savedLang === 'en' || savedLang === 'ru') {
-      lang = savedLang;
-    } else {
+    function chooseInitialLanguage() {
+      try {
+        const saved = localStorage.getItem('shohlabs-support-lang');
+        if (saved === 'en' || saved === 'ru') return saved;
+      } catch (_) {}
       const browserLanguage = ((navigator.languages && navigator.languages[0]) || navigator.language || 'en').toLowerCase();
-      lang = /^(ru|tg)(-|$)/.test(browserLanguage) ? 'ru' : 'en';
+      return /^(ru|tg)(-|$)/.test(browserLanguage) ? 'ru' : 'en';
     }
 
-    applyLanguage(lang);
+    enBtn.addEventListener('click', () => applyLanguage('en'));
+    ruBtn.addEventListener('click', () => applyLanguage('ru'));
+    applyLanguage(chooseInitialLanguage());
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
 </body>
