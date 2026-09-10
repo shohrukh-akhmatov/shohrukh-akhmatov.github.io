@@ -49,8 +49,23 @@
     .support-box h2 { margin-bottom:7px; }
     .support-box p { margin:0; color:var(--muted); }
     .support-box .hero-actions { margin-top:16px; }
+    .channels-box { margin-top:44px; padding:22px; border:1px solid var(--line); border-radius:16px; background:var(--surface); }
+    .channels-box h2 { margin-bottom:7px; }
+    .channels-box p { margin:0 0 18px; color:var(--muted); }
+    .channel-grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(140px, 1fr)); gap:10px; }
+    .channel-card { display:flex; align-items:center; gap:11px; padding:10px 12px; border:1px solid var(--line); border-radius:12px; text-decoration:none; background:var(--bg); transition:transform .15s ease, border-color .15s ease, box-shadow .15s ease; }
+    .channel-card:hover { transform:translateY(-2px); border-color:var(--accent); box-shadow:0 4px 12px rgba(0,0,0,.06); }
+    .channel-icon { width:34px; height:34px; border-radius:8px; display:grid; place-items:center; flex-shrink:0; background:var(--surface); color:var(--text); }
+    .channel-icon svg { width:19px; height:19px; display:block; }
+    .channel-info { display:flex; flex-direction:column; min-width:0; }
+    .channel-name { font-size:13px; font-weight:750; line-height:1.2; }
+    .channel-handle { font-size:11px; color:var(--muted); line-height:1.2; margin-top:2px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
     footer { border-top:1px solid var(--line); background:var(--surface); }
     .footer-inner { min-height:76px; display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:12px 20px; color:var(--muted); font-size:14px; }
+    .footer-social { display:flex; align-items:center; gap:8px; }
+    .footer-social a { display:inline-grid; place-items:center; width:34px; height:34px; border-radius:8px; border:1px solid var(--line); color:var(--muted); text-decoration:none; transition:color .15s, border-color .15s, transform .15s; }
+    .footer-social a:hover { color:var(--accent); border-color:var(--accent); transform:translateY(-1px); }
+    .footer-social a svg { width:17px; height:17px; }
     .footer-links { display:flex; flex-wrap:wrap; gap:12px 18px; }
     .footer-links a { color:var(--accent); text-underline-offset:3px; }
     @media (max-width:560px) { .header-inner { align-items:flex-start; flex-direction:column; justify-content:center; padding:13px 0; } .header-actions { width:100%; justify-content:space-between; } .apps { margin-top:46px; } .app-card { padding:18px; } }
@@ -105,6 +120,48 @@
       </div>
     </section>
 
+    <section class="channels-box" id="channels" aria-labelledby="channels-title">
+      <h2 id="channels-title" data-en="Channels & Community" data-ru="Каналы и сообщество">Channels & Community</h2>
+      <p data-en="Follow Shoh Labs across platforms for updates, releases, and development news." data-ru="Следите за обновлениями, релизами и новостями разработки Shoh Labs на удобной для вас платформе.">Follow Shoh Labs across platforms for updates, releases, and development news.</p>
+      <div class="channel-grid">
+        <a class="channel-card" href="https://t.me/shohlab" target="_blank" rel="noopener noreferrer">
+          <div class="channel-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg></div>
+          <div class="channel-info">
+            <span class="channel-name">Telegram</span>
+            <span class="channel-handle">@shohlab</span>
+          </div>
+        </a>
+        <a class="channel-card" href="https://youtube.com/@shohlabs?si=sj__Pq2pPxPfU6i9" target="_blank" rel="noopener noreferrer">
+          <div class="channel-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></div>
+          <div class="channel-info">
+            <span class="channel-name">YouTube</span>
+            <span class="channel-handle">@shohlabs</span>
+          </div>
+        </a>
+        <a class="channel-card" href="https://x.com/shokhrukhdev?s=11" target="_blank" rel="noopener noreferrer">
+          <div class="channel-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></div>
+          <div class="channel-info">
+            <span class="channel-name">X</span>
+            <span class="channel-handle">@shokhrukhdev</span>
+          </div>
+        </a>
+        <a class="channel-card" href="https://www.instagram.com/shohlabs?stkn=dWY0ZDNkemMzYTI5&utm_source=qr" target="_blank" rel="noopener noreferrer">
+          <div class="channel-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></div>
+          <div class="channel-info">
+            <span class="channel-name">Instagram</span>
+            <span class="channel-handle">@shohlabs</span>
+          </div>
+        </a>
+        <a class="channel-card" href="https://www.threads.com/@shohlabs" target="_blank" rel="noopener noreferrer">
+          <div class="channel-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.186 24h-.007c-3.581-.024-6.334-1.205-8.184-3.509C2.26 18.319 1.5 15.349 1.5 11.63 1.5 8.043 2.544 5.179 4.607 3.1 6.55 1.142 9.208.053 12.298 0c3.227.054 5.922 1.196 8.012 3.394 2.016 2.121 3.064 5.093 3.114 8.835v.59h-4.321c-.046-2.585-.688-4.577-1.908-5.92-1.229-1.353-2.92-2.072-5.027-2.138-1.97-.034-3.696.65-4.991 1.976C5.835 8.011 5.18 9.771 5.18 11.968c0 2.378.675 4.316 2.008 5.76 1.348 1.46 3.197 2.22 5.496 2.258 2.09.034 3.738-.574 4.898-1.808.647-.687 1.107-1.579 1.378-2.678-1.57-.464-2.883-1.258-3.805-2.3-1.077-1.218-1.638-2.73-1.62-4.372.018-1.696.657-3.14 1.848-4.174 1.171-1.016 2.766-1.536 4.61-1.503 1.95.034 3.51.658 4.636 1.854.78.828 1.328 1.882 1.637 3.125l.07.288v2.097c0 4.14-1.309 7.42-3.89 9.749C19.82 22.846 16.398 23.976 12.186 24zm-.354-9.336c1.096.018 2.102-.375 2.828-1.106.7-.707 1.054-1.637 1.026-2.69-.028-1.078-.423-1.99-1.144-2.637-.735-.658-1.74-.984-2.822-1.002-1.127-.019-2.122.348-2.796 1.033-.679.69-.997 1.63-.923 2.719.075 1.1.488 1.997 1.196 2.592.68.571 1.621.873 2.635.891z"/></svg></div>
+          <div class="channel-info">
+            <span class="channel-name">Threads</span>
+            <span class="channel-handle">@shohlabs</span>
+          </div>
+        </a>
+      </div>
+    </section>
+
     <section class="support-box" aria-labelledby="support-title">
       <h2 id="support-title" data-en="Need help?" data-ru="Нужна помощь?">Need help?</h2>
       <p data-en="Visit the Shoh Labs Support Center for app-specific help, legal information and contact options." data-ru="Перейдите в Центр поддержки Shoh Labs, чтобы получить помощь по приложениям, найти юридическую информацию или связаться с нами.">Visit the Shoh Labs Support Center for app-specific help, legal information and contact options.</p>
@@ -115,7 +172,19 @@
     </section>
   </main>
 
-  <footer><div class="wrap footer-inner"><span>&copy; <span id="year">2026</span> Shoh Labs</span><nav class="footer-links" aria-label="Site links"><a href="/support/" data-en="Support" data-ru="Поддержка">Support</a><a href="/app-ads.txt">app-ads.txt</a></nav></div></footer>
+  <footer>
+    <div class="wrap footer-inner">
+      <span>&copy; <span id="year">2026</span> Shoh Labs</span>
+      <div class="footer-social" aria-label="Channels">
+        <a href="https://t.me/shohlab" target="_blank" rel="noopener noreferrer" aria-label="Telegram" title="Telegram"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg></a>
+        <a href="https://youtube.com/@shohlabs?si=sj__Pq2pPxPfU6i9" target="_blank" rel="noopener noreferrer" aria-label="YouTube" title="YouTube"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
+        <a href="https://x.com/shokhrukhdev?s=11" target="_blank" rel="noopener noreferrer" aria-label="X" title="X"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+        <a href="https://www.instagram.com/shohlabs?stkn=dWY0ZDNkemMzYTI5&utm_source=qr" target="_blank" rel="noopener noreferrer" aria-label="Instagram" title="Instagram"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
+        <a href="https://www.threads.com/@shohlabs" target="_blank" rel="noopener noreferrer" aria-label="Threads" title="Threads"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.186 24h-.007c-3.581-.024-6.334-1.205-8.184-3.509C2.26 18.319 1.5 15.349 1.5 11.63 1.5 8.043 2.544 5.179 4.607 3.1 6.55 1.142 9.208.053 12.298 0c3.227.054 5.922 1.196 8.012 3.394 2.016 2.121 3.064 5.093 3.114 8.835v.59h-4.321c-.046-2.585-.688-4.577-1.908-5.92-1.229-1.353-2.92-2.072-5.027-2.138-1.97-.034-3.696.65-4.991 1.976C5.835 8.011 5.18 9.771 5.18 11.968c0 2.378.675 4.316 2.008 5.76 1.348 1.46 3.197 2.22 5.496 2.258 2.09.034 3.738-.574 4.898-1.808.647-.687 1.107-1.579 1.378-2.678-1.57-.464-2.883-1.258-3.805-2.3-1.077-1.218-1.638-2.73-1.62-4.372.018-1.696.657-3.14 1.848-4.174 1.171-1.016 2.766-1.536 4.61-1.503 1.95.034 3.51.658 4.636 1.854.78.828 1.328 1.882 1.637 3.125l.07.288v2.097c0 4.14-1.309 7.42-3.89 9.749C19.82 22.846 16.398 23.976 12.186 24zm-.354-9.336c1.096.018 2.102-.375 2.828-1.106.7-.707 1.054-1.637 1.026-2.69-.028-1.078-.423-1.99-1.144-2.637-.735-.658-1.74-.984-2.822-1.002-1.127-.019-2.122.348-2.796 1.033-.679.69-.997 1.63-.923 2.719.075 1.1.488 1.997 1.196 2.592.68.571 1.621.873 2.635.891z"/></svg></a>
+      </div>
+      <nav class="footer-links" aria-label="Site links"><a href="/support/" data-en="Support" data-ru="Поддержка">Support</a><a href="/app-ads.txt">app-ads.txt</a></nav>
+    </div>
+  </footer>
 
   <script>
     const enBtn = document.getElementById('enBtn');
