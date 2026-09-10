@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta id="meta-description" name="description" content="Official support center for Shoh Labs apps, including Somoni and Expiron.">
   <meta name="theme-color" content="#0f766e">
+  <link rel="icon" type="image/png" href="../assets/somoni-icon.png">
+  <link rel="apple-touch-icon" href="../assets/somoni-icon.png">
   <title>Shoh Labs Support</title>
   <style>
     :root { color-scheme:light dark; font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; --bg:#f5f7f7; --surface:#fff; --text:#17201f; --muted:#667370; --line:#dce3e1; --accent:#0f766e; --accent-soft:#e7f4f2; }
@@ -32,6 +34,7 @@
     .grid { display:grid; gap:14px; }
     .app-card { padding:20px; border:1px solid var(--line); border-radius:16px; background:var(--surface); }
     .app-top { display:flex; align-items:center; gap:14px; }
+    .app-icon { flex:0 0 54px; width:54px; height:54px; border-radius:14px; box-shadow:0 4px 12px rgba(0,0,0,.1); object-fit:cover; display:block; }
     .app-mark { flex:0 0 54px; width:54px; height:54px; display:grid; place-items:center; border-radius:14px; background:var(--accent-soft); color:var(--accent); font-size:23px; font-weight:800; }
     .app-name { margin:0; font-size:20px; font-weight:780; }
     .app-desc { margin:3px 0 0; color:var(--muted); font-size:14px; }
@@ -92,7 +95,7 @@
       <h2 data-en="Our apps" data-ru="Наши приложения">Our apps</h2>
       <div class="grid">
         <article class="app-card">
-          <div class="app-top"><div class="app-mark" aria-hidden="true">S</div><div><h3 class="app-name">Somoni</h3><p class="app-desc" data-en="RUB → TJS transfer rates and comparison." data-ru="Курсы и сравнение переводов RUB → TJS.">RUB → TJS transfer rates and comparison.</p></div></div>
+          <div class="app-top"><img class="app-icon" src="../assets/somoni-icon.png" alt="Somoni app icon" width="54" height="54"><div><h3 class="app-name">Somoni</h3><p class="app-desc" data-en="RUB → TJS transfer rates and comparison." data-ru="Курсы и сравнение переводов RUB → TJS.">RUB → TJS transfer rates and comparison.</p></div></div>
           <div class="links">
             <a class="primary" href="mailto:shohlabs.dev@gmail.com?subject=Somoni%20Support" data-en="Contact support" data-ru="Написать в поддержку">Contact support</a>
             <a href="https://shohrukh-akhmatov.github.io/ratetjapp/download/" data-en="Download" data-ru="Скачать">Download</a>
@@ -102,7 +105,7 @@
         </article>
 
         <article class="app-card">
-          <div class="app-top"><div class="app-mark" aria-hidden="true">E</div><div><h3 class="app-name">Expiron</h3><p class="app-desc" data-en="Expiration-date calculator, tracker and reminders." data-ru="Расчёт сроков годности, контроль и напоминания.">Expiration-date calculator, tracker and reminders.</p></div></div>
+          <div class="app-top"><img class="app-icon" src="../assets/expiron-icon.png" alt="Expiron app icon" width="54" height="54"><div><h3 class="app-name">Expiron</h3><p class="app-desc" data-en="Expiration-date calculator, tracker and reminders." data-ru="Расчёт сроков годности, контроль и напоминания.">Expiration-date calculator, tracker and reminders.</p></div></div>
           <div class="links">
             <a class="primary" href="mailto:shohlabs.dev@gmail.com?subject=Expiron%20Support" data-en="Contact support" data-ru="Написать в поддержку">Contact support</a>
             <a href="https://shohrukh-akhmatov.github.io/expira-legal/link.html" data-en="Download" data-ru="Скачать">Download</a>

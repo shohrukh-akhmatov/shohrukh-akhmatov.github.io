@@ -9,6 +9,9 @@
   <meta property="og:description" content="Useful, focused apps from Shoh Labs. Download Somoni and Expiron or contact support.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://shohrukh-akhmatov.github.io/">
+  <meta property="og:image" content="https://shohrukh-akhmatov.github.io/assets/somoni-icon.png">
+  <link rel="icon" type="image/png" href="assets/somoni-icon.png">
+  <link rel="apple-touch-icon" href="assets/somoni-icon.png">
   <link rel="canonical" href="https://shohrukh-akhmatov.github.io/">
   <title>Shoh Labs — Apps</title>
   <style>
@@ -38,8 +41,9 @@
     h2 { margin:0 0 16px; font-size:25px; }
     .app-list { display:grid; gap:14px; }
     .app-card { padding:22px; border:1px solid var(--line); border-radius:16px; background:var(--surface); }
-    .app-head { display:flex; gap:15px; align-items:center; }
-    .app-mark { width:60px; height:60px; flex:0 0 60px; display:grid; place-items:center; border-radius:15px; background:var(--accent-soft); color:var(--accent); font-size:25px; font-weight:850; }
+    .app-head { display:flex; gap:16px; align-items:center; }
+    .app-icon { width:64px; height:64px; flex:0 0 64px; border-radius:15px; box-shadow:0 4px 14px rgba(0,0,0,.1); object-fit:cover; display:block; }
+    .app-mark { width:64px; height:64px; flex:0 0 64px; display:grid; place-items:center; border-radius:15px; background:var(--accent-soft); color:var(--accent); font-size:25px; font-weight:850; }
     .app-name { margin:0; font-size:22px; line-height:1.2; }
     .app-desc { margin:5px 0 0; color:var(--muted); font-size:15px; }
     .app-actions { display:flex; flex-wrap:wrap; gap:9px; margin-top:18px; }
@@ -115,7 +119,7 @@
       <h2 id="apps-title" data-en="Our apps" data-ru="Наши приложения">Our apps</h2>
       <div class="app-list">
         <article class="app-card">
-          <div class="app-head"><div class="app-mark" aria-hidden="true">S</div><div><h3 class="app-name">Somoni</h3><p class="app-desc" data-en="Compare RUB → TJS transfer rates, calculate amounts and choose a better transfer option." data-ru="Сравнивайте курсы переводов RUB → TJS, рассчитывайте суммы и выбирайте более выгодный вариант.">Compare RUB → TJS transfer rates, calculate amounts and choose a better transfer option.</p></div></div>
+          <div class="app-head"><img class="app-icon" src="assets/somoni-icon.png" alt="Somoni app icon" width="64" height="64"><div><h3 class="app-name">Somoni</h3><p class="app-desc" data-en="Compare RUB → TJS transfer rates, calculate amounts and choose a better transfer option." data-ru="Сравнивайте курсы переводов RUB → TJS, рассчитывайте суммы и выбирайте более выгодный вариант.">Compare RUB → TJS transfer rates, calculate amounts and choose a better transfer option.</p></div></div>
           <div class="app-actions">
             <a class="download" href="https://shohrukh-akhmatov.github.io/ratetjapp/download/" data-en="Download Somoni" data-ru="Скачать Somoni">Download Somoni</a>
             <a id="somoniPrivacy" href="https://shohrukh-akhmatov.github.io/ratetjapp/en/privacy-en.html" data-en="Privacy" data-ru="Конфиденциальность">Privacy</a>
@@ -124,7 +128,7 @@
         </article>
 
         <article class="app-card">
-          <div class="app-head"><div class="app-mark" aria-hidden="true">E</div><div><h3 class="app-name">Expiron</h3><p class="app-desc" data-en="Calculate expiration dates, track products and receive reminders before items expire." data-ru="Рассчитывайте сроки годности, контролируйте продукты и получайте напоминания до истечения срока.">Calculate expiration dates, track products and receive reminders before items expire.</p></div></div>
+          <div class="app-head"><img class="app-icon" src="assets/expiron-icon.png" alt="Expiron app icon" width="64" height="64"><div><h3 class="app-name">Expiron</h3><p class="app-desc" data-en="Calculate expiration dates, track products and receive reminders before items expire." data-ru="Рассчитывайте сроки годности, контролируйте продукты и получайте напоминания до истечения срока.">Calculate expiration dates, track products and receive reminders before items expire.</p></div></div>
           <div class="app-actions">
             <a class="download" href="https://shohrukh-akhmatov.github.io/expira-legal/link.html" data-en="Download Expiron" data-ru="Скачать Expiron">Download Expiron</a>
             <a id="expironPrivacy" href="https://shohrukh-akhmatov.github.io/expira-legal/en/privacy.html" data-en="Privacy" data-ru="Конфиденциальность">Privacy</a>
