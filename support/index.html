@@ -167,11 +167,15 @@
 
     function chooseInitialLanguage() {
       try {
+        const param = new URLSearchParams(window.location.search).get('lang');
+        if (param === 'ru' || param === 'en') return param;
+      } catch (_) {}
+      try {
         const saved = localStorage.getItem('shohlabs-support-lang');
         if (saved === 'en' || saved === 'ru') return saved;
       } catch (_) {}
       const browserLanguage = ((navigator.languages && navigator.languages[0]) || navigator.language || 'en').toLowerCase();
-      return /^(ru|tg)(-|$)/.test(browserLanguage) ? 'ru' : 'en';
+      return /^ru(-|$)/.test(browserLanguage) ? 'ru' : 'en';
     }
 
     enBtn.addEventListener('click', () => applyLanguage('en'));
